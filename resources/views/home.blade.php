@@ -33,7 +33,7 @@
                                 </li>
                             @endforeach
                         </ul>
-                        @endif
+                        @endif 
                     </div>
                 </div>
             </div>

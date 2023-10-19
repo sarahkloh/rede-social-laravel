@@ -22,4 +22,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/post/create', [App\Http\Controllers\PostController::class, 'create'])->middleware(Authenticate::class);;
-Route::post('/post', [App\Http\Controllers\PostController::class, 'store'])->middleware(Authenticate::class);;
+Route::post('/post', [App\Http\Controllers\PostController::class, 'store'])->middleware(Authenticate::class);
+
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index']);
+Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'show']);
